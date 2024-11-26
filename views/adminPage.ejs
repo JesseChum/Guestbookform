@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>data</title>
+  </head>
+  <body>
+    <h1>Admin Page</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Job Title</th>
+          <th>Company</th>
+          <th>LinkedIn</th>
+          <th>How We Met</th>
+          <th>Other</th>
+          <th>Message</th>
+          <th>Mailing List</th>
+          <th>Email Format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% details.forEach(data => { %>
+        <tr>
+          <td><%= data.first_name %></td>
+          <td><%= data.last_name %></td>
+          <td><%= data.job_title %></td>
+          <td><%= data.company %></td>
+          <td><%= data.linked_in %></td>
+          <td><%= data.how_we_met %></td>
+          <td><%= data.other %></td>
+          <td><%= data.message %></td>
+          <td><%= data.mailing_list ? "Yes" : "No" %></td>
+          <td><%= data.email_format %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
